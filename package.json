@@ -42,7 +42,9 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "browserslist": [
     "last 2 versions",
@@ -90,7 +92,8 @@
     "redux-saga": "1.0.2",
     "reselect": "4.0.0",
     "sanitize.css": "8.0.0",
-    "styled-components": "4.2.0"
+    "styled-components": "4.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "7.4.3",
@@ -163,5 +166,6 @@
     "webpack-hot-middleware": "2.24.3",
     "webpack-pwa-manifest": "4.0.0",
     "whatwg-fetch": "3.0.0"
-  }
+  },
+  "snyk": true
 }
